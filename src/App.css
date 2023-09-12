@@ -19,6 +19,24 @@ body {
 .icon, .icon_header {
   margin-right: 5px;
 }
+.chart-filter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1; /* Ensure the filter icon is above the charts */
+}
+
+.filter-icon {
+  font-size: 20px;
+  color: #9e9ea4;
+  transition: transform 0.2s ease; /* Add a smooth transform animation */
+}
+
+.filter-icon.active {
+  transform: rotate(45deg); /* Rotate the filter icon when active */
+}
+
 
 .close_icon {
   color: red;
