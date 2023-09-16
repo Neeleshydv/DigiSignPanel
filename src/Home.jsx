@@ -10,43 +10,43 @@ function Home() {
 
     const data = [
         {
-          name: 'Page A',
+          name: '01/01/2023',
           OS: 4000,
           LS: 2400,
           amt: 2400,
         },
         {
-          name: 'Page B',
+          name: '01/01/2023',
           OS: 3000,
           LS: 1398,
           amt: 2210,
         },
         {
-          name: 'Page C',
+          name: '01/01/2023',
           OS: 2000,
           LS: 9800,
           amt: 2290,
         },
         {
-          name: 'Page D',
+          name: '01/01/2023',
           OS: 2780,
           LS: 3908,
           amt: 2000,
         },
         {
-          name: 'Page E',
+          name: '01/01/2023',
           OS: 1890,
           LS: 4800,
           amt: 2181,
         },
         {
-          name: 'Page F',
+          name: '01/01/2023',
           OS: 2390,
           LS: 3800,
           amt: 2500,
         },
         {
-          name: 'Page G',
+          name: '01/01/2023',
           OS: 3490,
           LS: 4300,
           amt: 2100,
@@ -104,7 +104,7 @@ function Home() {
                 bottom: 5,
             }}
             >
-                <CartesianGrid strokeDasharray="3 3" />
+                <CartesianGrid stroke="transparent"  />
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
@@ -126,7 +126,7 @@ function Home() {
                     bottom: 5,
                 }}
                 >
-                <CartesianGrid strokeDasharray="3 3" />
+                <CartesianGrid stroke="transparent"  />
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />

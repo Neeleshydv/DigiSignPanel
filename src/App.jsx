@@ -1,23 +1,34 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './Header'
-import Sidebar from './Sidebar'
-import Home from './Home'
+import { useState } from 'react';
+import './App.css';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Home from './Home';
+import Media from './Media'; // Import the Media component
 
 function App() {
-  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+  const [activeSection, setActiveSection] = useState('Dashboard');
 
   const OpenSidebar = () => {
-    setOpenSidebarToggle(!openSidebarToggle)
+    setOpenSidebarToggle(!openSidebarToggle);
   }
+
+  // Function to change the active section to 'Media'
+  const openMediaPage = () => {
+    setActiveSection('Media');
+  };
 
   return (
     <div className='grid-container'>
-      <Header OpenSidebar={OpenSidebar}/>
-      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
-      <Home />
+      <Header OpenSidebar={OpenSidebar} />
+      <Sidebar openSidebarToggle={openSidebarToggle} activeSection={activeSection} openMediaPage={openMediaPage} />
+      {activeSection === 'Dashboard' ? (
+        <Home setActiveSection={setActiveSection} />
+      ) : activeSection === 'Media' ? (
+        <Media />
+      ) : null}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

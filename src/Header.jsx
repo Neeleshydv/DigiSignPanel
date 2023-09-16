@@ -20,6 +20,4 @@ function Header({ OpenSidebar }) {
   );
 }
 
-export default Header; // Add this line to export the Header component as default
-
-// Rest of the code...
+export default Header; 
