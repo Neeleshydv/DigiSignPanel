@@ -434,3 +434,6 @@ body {
 .delete-icon:hover {
   color: #007bff; /* Change color on hover */
 }
+.black-text {
+  color: black;
+}
